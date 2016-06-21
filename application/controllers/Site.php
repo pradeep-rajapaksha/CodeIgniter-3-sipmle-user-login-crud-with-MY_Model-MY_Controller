@@ -1,6 +1,17 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+/**
+ * Site Controller
+ *
+ * Long description for class (if any)...
+ * @author     Pradeep Rajapaksha <pradeepprasanna.rajapaksha4@gmail.lk>
+ * @copyright  2016
+ * @license    
+ * @version    
+ * @link       
+ * @since      Class available since Release 1.0.0
+ */
+ 
 class Site extends MY_Controller {
 
 	public function __construct(){
