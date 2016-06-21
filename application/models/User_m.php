@@ -1,13 +1,13 @@
 <?php
 /**
- * user Model
+ * User Model
  *
  * Long description for class (if any)...
- * @author     Eranga Athapaththu <eranga@openarc.lk>
- * @copyright  2013 RAD Team - OpenArc
- * @license    http://www.php.net/license/3_01.txt  PHP License 3.01
- * @version    Release: 1.0
- * @link       http://pear.php.net/package/PackageName
+ * @author     Pradeep Rajapaksha <pradeepprasanna.rajapaksha4@gmail.lk>
+ * @copyright  2016
+ * @license    
+ * @version    
+ * @link       
  * @since      Class available since Release 1.0.0
  */
 
