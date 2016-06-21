@@ -157,7 +157,8 @@ class User extends MY_Controller {
         
 	}
 	
-	public function delete($id){
+	public function delete($id)
+	{
 	        // this function only access by Admin, if not redirect
 	        if($this->session->userdata('usertype')!='1'){
 	            redirect('dashboard');
@@ -165,6 +166,14 @@ class User extends MY_Controller {
 	        $this->staff_m->delete($id);
 	        redirect('user/?delete=true');
 	        //redirect('user'); // Redirecting to users list view
-	    }
+	}
+	    
+	public function disable($id)
+	{
+	        $this->member_m->save(array(
+	            'status'=>0
+	        ),$id);
+	        redirect('member?disable=true');
+    	}
 	
 }
