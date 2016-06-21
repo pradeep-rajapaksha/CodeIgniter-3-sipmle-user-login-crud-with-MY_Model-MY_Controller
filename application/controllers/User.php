@@ -51,15 +51,15 @@ class User extends MY_Controller {
 
 	        if ($id) 
 	        {
-	            $this->data['librarian']  =   $this->librarian_m->get($id);
-	            count($this->data['librarian']) || $this->data['error'][] = 'librarian could not be found';
+	            $this->data['user']  =   $this->user_m->get($id);
+	            count($this->data['user']) || $this->data['error'][] = 'user could not be found';
 	            
 	        }
 	        else
 	        {
-	            redirect('librarian/add/');
+	            redirect('user/add/');
 	        }
-	        $this->data['subview'] = 'librarian/view';
+	        $this->data['subview'] = 'user/view';
 	        $this->load->view('_layout',$this->data);
     }
     
