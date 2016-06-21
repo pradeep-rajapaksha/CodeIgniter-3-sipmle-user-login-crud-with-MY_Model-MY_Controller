@@ -46,6 +46,23 @@ class User extends MY_Controller {
 		
 	}
 	
+	public function view($id = NULL)
+    {
+
+	        if ($id) 
+	        {
+	            $this->data['librarian']  =   $this->librarian_m->get($id);
+	            count($this->data['librarian']) || $this->data['error'][] = 'librarian could not be found';
+	            
+	        }
+	        else
+	        {
+	            redirect('librarian/add/');
+	        }
+	        $this->data['subview'] = 'librarian/view';
+	        $this->load->view('_layout',$this->data);
+    }
+    
 	public function edit($id = NULL)
     {
         // Fetch a user or set a new one
