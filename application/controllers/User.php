@@ -140,6 +140,14 @@ class User extends MY_Controller {
         
 	}
 	
-	
+	public function delete($id){
+	        // this function only access by Admin, if not redirect
+	        if($this->session->userdata('usertype')!='1'){
+	            redirect('dashboard');
+	        }
+	        $this->staff_m->delete($id);
+	        redirect('user/?delete=true');
+	        //redirect('user'); // Redirecting to users list view
+	    }
 	
 }
