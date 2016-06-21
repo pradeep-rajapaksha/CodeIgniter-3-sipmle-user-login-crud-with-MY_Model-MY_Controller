@@ -82,7 +82,7 @@ class User extends MY_Controller {
         $this->load->view('_layout',$this->data);
     }
 	
-	public function add()
+	public function add($id = NULL)
 	{
 	    $this->data['user'] = $this->user_m->get_new();
 
